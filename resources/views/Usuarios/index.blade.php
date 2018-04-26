@@ -6,11 +6,13 @@
 
 	<div>
 		<a class="btn btn-info btn-sm" href="{{ route('user.create')}}">Crear nuevo registro</a>
-		<a class="btn btn-info btn-sm" href="#">Modificar registro</a>
+		{{-- <a class="btn btn-info btn-sm" href="#">Modificar registro</a> --}}
 	</div>
 
 	<hr>
 
+
+	
 	<table width="100%">
 		<thead >
 			<tr>	
@@ -32,12 +34,12 @@
 					<td>{{$persona->email}}</td>
 					<td>
 						<a class="btn btn-primary btn-sm" href="{{ route('user.show', $persona->id)}}">Ver</a>
-						{{-- <a class="btn btn-info btn-sm" href="{{route('user.edit', $persona->id)}}">Editar</a>
+						<a class="btn btn-info btn-sm" href="{{route('user.edit', $persona->id)}}">Editar</a>
 						<form style="display:inline" method="POST" action="{{ route('user.destroy', $persona->id) }}">
 							{!! csrf_field() !!}
 							{!! method_field('DELETE') !!}
 							<button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
-						</form> --}}
+						</form>
 					</td>
 				</tr>
 
